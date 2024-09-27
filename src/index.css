@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-bg-color: #192d41;
+}
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--body-bg-color);
+}
+
+a {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: inherit;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.header{
+  box-shadow: 0 0 1px white;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.converter-block {
+  background: linear-gradient(135deg, #262b31, #121f33);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.card {
+  width: calc(100% / 3 - 30px);
+  background-color: #001529; /* Match the body background color */
+  border-radius: 5px;
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Vertical alignment of content */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  color: white; /* White text for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: light border for contrast */
+}
+
+
+.card2 {
+  width: calc(100% / 3 - 30px);
+  background-color: #265a8f; /* Match the body background color */
+  border-radius: 5px;
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Vertical alignment of content */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  color: white; /* White text for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: light border for contrast */
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.offcanva{
+  background-color: #3a81c7 !important;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .card {
+    width: calc(100% / 1);
+  }
+  .card2 {
+    width: calc(100% / 1);
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 768px) {
+  .card {
+    width: calc(100% / 2 - 30px);
+  }
+  .card2 {
+    width: calc(100% / 2 - 30px);
+  }
+}
