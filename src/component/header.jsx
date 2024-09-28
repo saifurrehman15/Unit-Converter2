@@ -22,17 +22,24 @@ function MainHeader() {
 
   return (
     <div className="bg-[#001529]   w-full h-20 header flex items-center p-4 sm:p-8 justify-between text-white fixed top-0 z-10">
-      <div>
-        <Link to="/">
+      <div className="flex items-center p-4">
+        <Link
+          to="/"
+          className="flex items-center gap-2 transition-transform transform hover:scale-105"
+        >
           <img
             src="../src/assets/logo.jpeg"
             alt="Logo"
-            height={"60px"}
-            width={"60px"}
-            className="rounded-full object-contain"
+            height={"50px"}
+            width={"50px"}
+            className="rounded-full object-contain shadow-lg transition-shadow hover:shadow-2xl"
           />
+          <h1 className="text-xl font-bold text-gray-300 hover:text-blue-500">
+            Unit Converter
+          </h1>
         </Link>
       </div>
+
       <div>
         {screen.width < 768 ? (
           <span
