@@ -6,8 +6,6 @@ import RouterForRoutes from "./Route/route.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterForRoutes>
-      <App />
-    </RouterForRoutes>
+    <RouterForRoutes />
   </StrictMode>
 );
