@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import initialSet from "./component/initialValueSet";
-
+import swap_image from "./assets/9870522.png";
 function App() {
   const [value1, setValue1] = useState(1);
   const [value2, setValue2] = useState(0.001);
@@ -317,7 +317,7 @@ function App() {
           </div>
 
           <img
-            src="src/assets/9870522.png"
+            src={swap_image}
             alt="Swap"
             height={30}
             width={30}
