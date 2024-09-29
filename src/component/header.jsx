@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Drawer } from "antd";
+import image from "../assets/logo.jpeg"
+
 import {
   MenuOutlined,
   HomeOutlined,
@@ -8,7 +10,6 @@ import {
   CustomerServiceOutlined,
   ToolOutlined,
 } from "@ant-design/icons";
-
 function MainHeader() {
   const [open, setOpen] = useState(false);
 
@@ -28,7 +29,7 @@ function MainHeader() {
           className="flex items-center gap-2 transition-transform transform hover:scale-105"
         >
           <img
-            src="../src/assets/logo.jpeg"
+            src={image}
             alt="Logo"
             height={"50px"}
             width={"50px"}
