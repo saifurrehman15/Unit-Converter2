@@ -9,6 +9,7 @@ function SelectBox2({ selectedFieldUnit, onChangeFunc }) {
       <option value="Frequency">Frequency</option>
       <option value="Temperature">Temperature</option>
       <option value="Time">Time</option>
+      <option value="Length">Length</option>
     </select>
   );
 }

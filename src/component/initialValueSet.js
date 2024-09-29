@@ -32,6 +32,11 @@ function initialSet(
     setSelectFirst2("Minute");
     setValue1(1);
     setValue2(0.01667);
+  } else if (selectedCategory === "Length") {
+    setSelectFirst("Metre");
+    setSelectFirst2("Centimetre");
+    setValue1(1);
+    setValue2(100);
   }
 }
 

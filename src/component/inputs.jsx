@@ -4,6 +4,8 @@ function Inputs({
   unitsCategories,
   selectedFieldUnit,
 }) {
+  console.log(unitsCategories[selectedFieldUnit]);
+  
   return (
     <span className="flex w-ful">
       <input

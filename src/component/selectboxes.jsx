@@ -3,6 +3,7 @@ const options = {
   Temperature: ["Celcius", "Fahrenheit", "Kelvin"],
   Frequency: ["Hertz", "Kilohertz", "Megahertz", "Gigahertz"],
   Time: ["Second", "Minute", "Hour", "Millisecond", "Day", "Week"],
+  Length: ["Kilometre", "Metre", "Centimetre", "Millimetre"],
 };
 
 function SelectBox({ selectedFieldUnit, onChangeFunc, category }) {

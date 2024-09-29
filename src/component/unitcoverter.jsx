@@ -11,6 +11,7 @@ import converterFunc3 from "../method/freqconversion";
 import Inputs from "./inputs";
 import SelectBox from "./selectboxes";
 import SelectBox2 from "./selectbox2";
+import lenghtFormulas from "../formulas/length";
 
 function UnitConverter() {
   const [value1, setValue1] = useState(1);
@@ -29,15 +30,19 @@ function UnitConverter() {
   const temperatureRates = tempFormulas();
   const frequencyRates = frequencyFormulas();
   const timeSet = timeFormulas();
+  const length = lenghtFormulas();
 
   const unitCheck = () => {
     if (category === "Mass") return massRates;
     if (category === "Temperature") return temperatureRates;
     if (category === "Frequency") return frequencyRates;
     if (category === "Time") return timeSet;
+    if (category === "Length") return length;
   };
 
   const unitsCategories = unitCheck();
+  console.log(length);
+  
 
   if (selectFirst === selectFirst2 && trigger === "first") {
     setSelectFirst2(lastVal);
@@ -113,6 +118,17 @@ function UnitConverter() {
         setValue1,
         setValue2,
         timeSet
+      );
+    } else if (category === "Length") {
+      converssionMethod(
+        selectFirst,
+        selectFirst2,
+        inpCheck,
+        value1,
+        value2,
+        setValue1,
+        setValue2,
+        length
       );
     }
   }, [value1, value2, selectFirst, selectFirst2]);
