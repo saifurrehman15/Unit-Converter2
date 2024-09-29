@@ -32,7 +32,7 @@ h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.header{
+.header {
   box-shadow: 0 0 1px white;
 }
 button {
@@ -59,7 +59,11 @@ button:focus-visible {
 }
 .card {
   width: calc(100% / 3 - 30px);
-  background: linear-gradient(145deg, #001529, #012030); /* Add gradient for depth */
+  background: linear-gradient(
+    145deg,
+    #001529,
+    #012030
+  ); /* Add gradient for depth */
   border-radius: 10px; /* More rounded corners */
   display: flex;
   flex-direction: column;
@@ -89,7 +93,6 @@ button:focus-visible {
   color: rgba(255, 255, 255, 0.8); /* Softer text color */
 }
 
-
 .card2 {
   width: calc(100% / 3 - 30px);
   background-color: #265a8f; /* Match the body background color */
@@ -104,7 +107,6 @@ button:focus-visible {
   border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: light border for contrast */
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -118,7 +120,7 @@ button:focus-visible {
   }
 }
 
-.offcanva{
+.offcanva {
   background-color: #3a81c7 !important;
   color: #fff;
 }
@@ -135,15 +137,14 @@ button:focus-visible {
   .card2 {
     width: calc(100% / 1);
   }
-  .input-groups{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .logo{
+  .logo {
     height: 40px;
     width: 40px;
+  }
+  .converter-block {
+    background: linear-gradient(135deg, #24282e, #121f33);
+    box-shadow: 0px 0px 2px teal;
+    height: 350px !important;
   }
 }
 
@@ -153,5 +154,13 @@ button:focus-visible {
   }
   .card2 {
     width: calc(100% / 2 - 30px);
+  }
+}
+@media only screen and (max-width: 458px) {
+  .input-groups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
