@@ -4,13 +4,13 @@ function initialSet(
   setSelectFirst,
   setSelectFirst2,
   setValue1,
-  setValue2,
+  setValue2
 ) {
   const selectedCategory = value;
-  
+
   // Set the category
   setCategory(selectedCategory);
-  
+
   // Set values based on selected category
   if (selectedCategory === "Temperature") {
     setSelectFirst("Celcius");

@@ -39,7 +39,6 @@ function UnitConverter() {
 
   const unitsCategories = unitCheck();
 
-
   if (selectFirst === selectFirst2 && trigger === "first") {
     setSelectFirst2(lastVal);
     setCheck("random");
