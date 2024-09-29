@@ -17,35 +17,42 @@ function App() {
       Kilogram: 1 / 1000,
       Milligram: 1000,
       Pound: 1 / 453.6,
+      unit: "g",
     },
     Kilogram: {
       Gram: 1000,
       Milligram: 1000000,
       Pound: 2.205,
+      unit: "kg",
     },
     Milligram: {
       Gram: 1 / 1000,
       Kilogram: 1 / 1000000,
       Pound: 1 / 453_592,
+      unit: "mg",
     },
     Pound: {
       Kilogram: 1 / 2.205,
       Milligram: 453600,
       Gram: 453.6,
+      unit: "lbs",
     },
   };
   const temperatureRates = {
     Celcius: {
       Ferenheit: (value) => (value * 9) / 5 + 32,
       Kelvin: (value) => value + 273.15,
+      unit: "°C",
     },
     Ferenheit: {
       Celcius: (value) => ((value - 32) * 5) / 9,
       Kelvin: (value) => (((value - 32) * 5) / 9 + 273.15).toFixed(3),
+      unit: "°F",
     },
     Kelvin: {
       Celcius: (value) => value - 273.15,
       Ferenheit: (value) => (((value - 273.15) * 9) / 5 + 32).toFixed(3),
+      unit: "K",
     },
   };
   const frequencyRates = {
@@ -53,23 +60,28 @@ function App() {
       Kilohertz: 1 / 1000,
       Megahertz: 1 / 1000000,
       Gigahertz: 1 / 1000000000,
+      unit: "Hz",
     },
     Kilohertz: {
       Hertz: 1000,
       Megahertz: 1 / 1000,
       Gigahertz: 1 / 1000000,
+      unit: "kHz",
     },
     Megahertz: {
       Kilohertz: 1000,
       Hertz: 1000000,
       Gigahertz: 1 / 1000,
+      unit: "MHz",
     },
     Gigahertz: {
       Kilohertz: 1000000,
       Hertz: 1000000000,
       Megahertz: 1000,
+      unit: "GHz",
     },
   };
+
   const timeSet = {
     Second: {
       Minute: 1 / 60,
@@ -77,6 +89,7 @@ function App() {
       Millisecond: 1000,
       Day: 1 / 86400,
       Week: 1 / 604800,
+      unit: "s",
     },
     Minute: {
       Second: 60,
@@ -84,6 +97,7 @@ function App() {
       Millisecond: 60000,
       Day: 1 / 1440,
       Week: 1 / 10080,
+      unit: "min",
     },
     Hour: {
       Second: 3600,
@@ -91,6 +105,7 @@ function App() {
       Millisecond: 3.6,
       Day: 1 / 24,
       Week: 1 / 168,
+      unit: "h",
     },
     Millisecond: {
       Second: 1 / 1000,
@@ -98,6 +113,7 @@ function App() {
       Minute: 1 / 60000,
       Day: 1 / 8.64,
       Week: 1 / 6.048,
+      unit: "ms",
     },
     Day: {
       Minute: 1440,
@@ -105,6 +121,7 @@ function App() {
       Second: 86400,
       Millisecond: 8.64,
       Week: 1 / 7,
+      unit: "d",
     },
     Week: {
       Millisecond: 6.048,
@@ -112,8 +129,18 @@ function App() {
       Minute: 10080,
       Second: 604800,
       Hour: 168,
+      unit: "wk",
     },
   };
+
+  const unitCheck = () => {
+    if (category === "Mass") return massRates;
+    if (category === "Temperature") return temperatureRates;
+    if (category === "Frequency") return frequencyRates;
+    if (category === "Time") return timeSet;
+  };
+
+  const unitsCategories = unitCheck();
 
   const options = {
     Mass: ["Kilogram", "Pound", "Gram", "Milligram"],
@@ -128,9 +155,18 @@ function App() {
     if (massRates[selectFirst] && massRates[selectFirst][selectFirst2]) {
       if (inpCheck === "inp1" || inpCheck === "random") {
         const valueSecond = value1 * massRates[selectFirst][selectFirst2];
-        setValue2(valueSecond);
+        setValue2(
+          valueSecond.toString().split(".")[1]?.length > 8
+            ? valueSecond.toFixed(6)
+            : valueSecond
+        );
       } else if (inpCheck === "inp2") {
-        setValue1(value2 / massRates[selectFirst][selectFirst2]);
+        const valueSecond = value2 / massRates[selectFirst][selectFirst2];
+        setValue1(
+          valueSecond.toString().split(".")[1]?.length > 8
+            ? valueSecond.toFixed(6)
+            : valueSecond
+        );
       }
     }
 
@@ -193,14 +229,24 @@ function App() {
         temperatureRates[selectFirst] &&
         temperatureRates[selectFirst][selectFirst2]
       ) {
-        setValue2(temperatureRates[selectFirst][selectFirst2](value1));
+        const valueSecond = temperatureRates[selectFirst][selectFirst2](value1);
+        setValue2(
+          valueSecond.toString().split(".")[1]?.length > 8
+            ? valueSecond.toFixed(3)
+            : valueSecond
+        );
       }
     } else if (inpCheck === "inp2") {
       if (
         temperatureRates[selectFirst2] &&
         temperatureRates[selectFirst2][selectFirst]
       ) {
-        setValue1(temperatureRates[selectFirst2][selectFirst](value2));
+        const valueSecond = temperatureRates[selectFirst2][selectFirst](value2);
+        setValue1(
+          valueSecond.toString().split(".")[1]?.length > 8
+            ? valueSecond.toFixed(3)
+            : valueSecond
+        );
       }
     }
   };
@@ -218,7 +264,13 @@ function App() {
             : valueSecond
         );
       } else if (inpCheck === "inp2") {
-        setValue1(value2 / frequencyRates[selectFirst][selectFirst2]);
+        const valueSecond = value2 / frequencyRates[selectFirst][selectFirst2];
+
+        setValue1(
+          valueSecond.toString().split(".")[1]?.length > 8
+            ? valueSecond.toFixed(6)
+            : valueSecond
+        );
       }
     }
   };
@@ -271,7 +323,7 @@ function App() {
       <h1 className="mb-2 text-3xl text-white font-bold">Unit Converter</h1>
       <div className="border border-gray-700 w-[100%] lg:w-[600px] h-[300px] sm:w-[600px]  text-white rounded-md flex flex-col justify-center items-center converter-block shadow-md">
         <select
-          className="h-10 sm:h-8 w-[72%] mb-10 border border-gray-600 text-gray-100 bg-gray-700 text-center rounded outline-none focus:ring-2 focus:ring-blue-500"
+          className="h-10 sm:h-10 w-[72%] mb-10 border border-gray-600 text-gray-100 bg-gray-700 text-center rounded outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => {
             const selectedCategory = e.target.value;
             initialSet(
@@ -291,16 +343,21 @@ function App() {
         </select>
 
         <div className="flex justify-center items-center gap-4 block">
-          <div className="flex flex-col w-1/2">
-            <input
-              type="number"
-              value={value1}
-              className="h-10 w-full bg-gray-700 text-white border border-gray-600 text-center rounded-t outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => {
-                setCheck("inp1");
-                setValue1(parseFloat(e.target.value));
-              }}
-            />
+          <div className="flex flex-col w-[72%]">
+            <span className="flex">
+              <input
+                type="number"
+                value={value1}
+                className="h-10 w-full bg-gray-700 text-white border border-gray-600 border-r-0 text-center rounded-tl outline-none"
+                onChange={(e) => {
+                  setCheck("inp1");
+                  setValue1(parseFloat(e.target.value));
+                }}
+              />
+              <span className="bg-gray-700 p-1 rounded-tr border w-12 text-center border-gray-600">
+                {unitsCategories[selectFirst]["unit"]}
+              </span>
+            </span>
             <select
               value={selectFirst}
               onChange={(e) => {
@@ -334,16 +391,22 @@ function App() {
             }}
           />
 
-          <div className="flex flex-col w-1/2">
-            <input
-              type="number"
-              value={value2}
-              className="h-10 w-30 bg-gray-700 text-white border border-gray-600 text-center rounded-t outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => {
-                setValue2(parseFloat(e.target.value));
-                setCheck("inp2");
-              }}
-            />
+          <div className="flex flex-col w-[72%]">
+            <span className="flex w-ful">
+              <input
+                type="number"
+                value={value2}
+                className="h-10 w-full bg-gray-700 text-white border border-gray-600 border-r-0 text-center rounded-tl outline-none"
+                onChange={(e) => {
+                  setValue2(parseFloat(e.target.value));
+                  setCheck("inp2");
+                }}
+              />
+              <span className="bg-gray-700 p-1 rounded-tr border w-12 text-center border-gray-600">
+                {unitsCategories[selectFirst2]["unit"]}
+              </span>
+            </span>
+
             <select
               value={selectFirst2}
               onChange={(e) => {

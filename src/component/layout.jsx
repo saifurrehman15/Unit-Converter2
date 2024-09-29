@@ -11,7 +11,7 @@ function LayoutFunc() {
       <div>
         <MainHeader />
       </div>
-      <div className="mt-20">
+      <div id="about" className="mt-20">
         <HeroSection />
       </div>
 
@@ -22,7 +22,7 @@ function LayoutFunc() {
       <div id="tools" className="mt-5">
         <Outlet />
       </div>
-      <div id="about" className="mt-5">
+      <div id="reviews" className="mt-5">
         <About />
       </div>
       <div>

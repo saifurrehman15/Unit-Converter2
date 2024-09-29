@@ -8,7 +8,7 @@ function About() {
       className="flex flex-col gap-10 justify-center items-center text-white p-4"
       style={{ backgroundColor: "#192d41" }}
     >
-      <h1 className="text-4xl font-bold text-white mb-6">
+      <h1 className="text-4xl font-bold text-white mb-6 text-center">
         What Our Clients Say
       </h1>
       <div className="flex flex-wrap gap-6 w-full p-4 justify-center">

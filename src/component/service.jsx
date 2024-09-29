@@ -1,6 +1,6 @@
 function Services() {
     return (
-      <div className="flex flex-col gap-10 justify-center items-center text-white p-4">
+      <div  className="flex flex-col gap-10 justify-center items-center text-white p-4">
         <h1 className="text-4xl font-bold">Our Services</h1>
         <p className="text-lg text-center max-w-xl">
           We offer a range of services to help you with your unit conversion needs. 

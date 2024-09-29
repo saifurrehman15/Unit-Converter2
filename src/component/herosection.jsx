@@ -1,7 +1,7 @@
 
 function HeroSection() {
   return (
-    <div className="flex flex-col justify-center items-center bg-gradient-to-r from-[#001529] to-[#192d41] h-[420px] text-white p-6 text-center">
+    <div  className="flex flex-col justify-center items-center bg-gradient-to-r from-[#001529] to-[#192d41] h-[420px] text-white p-6 text-center">
       {/* Hero Content */}
       <h1 className="text-5xl font-extrabold mb-4 drop-shadow-md">Online Unit Converter</h1>
       <p className="text-lg mb-6 max-w-md">
