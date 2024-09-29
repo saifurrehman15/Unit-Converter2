@@ -1,4 +1,5 @@
 import {
+  FacebookFilled,
   FacebookOutlined,
   InstagramOutlined,
   TwitterOutlined,
@@ -40,7 +41,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {<FacebookOutlined />}
+                {<FacebookFilled />}
               </a>
               <a
                 href="https://twitter.com"

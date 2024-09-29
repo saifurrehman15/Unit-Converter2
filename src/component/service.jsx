@@ -1,7 +1,7 @@
 function Services() {
   return (
 <div className="flex flex-col gap-10 justify-center items-center text-white p-6 bg-[#192d41]">
-  <h1 className="text-5xl font-bold text-center">Our Services</h1>
+  <h1 className="text-4xl font-bold text-center">Our Services</h1>
   <p className="text-lg text-center max-w-2xl">
     We offer a range of services to help you with your unit conversion
     needs. Our user-friendly platform allows you to convert various units
