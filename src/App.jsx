@@ -321,7 +321,7 @@ function App() {
   return (
     <div className="flex flex-col justify-center items-center p-4 mt-10">
       <h1 className="mb-2 text-3xl text-white font-bold">Unit Converter</h1>
-      <div className="border border-gray-700 w-[100%] lg:w-[600px] h-[300px] sm:w-[600px]  text-white rounded-md flex flex-col justify-center items-center converter-block shadow-md">
+      <div className="border border-gray-700 w-[100%] lg:w-[600px] h-[300px] sm:w-[600px]  text-white rounded-md flex flex-col justify-center items-center converter-block shadow-md p-2">
         <select
           className="h-10 sm:h-10 w-[72%] mb-10 border border-gray-600 text-gray-100 bg-gray-700 text-center rounded outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => {
