@@ -54,21 +54,39 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 .converter-block {
-  background: linear-gradient(135deg, #262b31, #121f33);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #24282e, #121f33);
+  box-shadow: 0px 0px 2px teal;
 }
 .card {
   width: calc(100% / 3 - 30px);
-  background-color: #001529; /* Match the body background color */
-  border-radius: 5px;
-  display: flex; /* Flexbox for alignment */
-  flex-direction: column; /* Vertical alignment of content */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
-  color: white; /* White text for better contrast */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: light border for contrast */
+  background: linear-gradient(145deg, #001529, #012030); /* Add gradient for depth */
+  border-radius: 10px; /* More rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a 3D effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px; /* Add padding for internal spacing */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift the card slightly when hovered */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Larger heading size */
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6; /* Improved readability */
+  color: rgba(255, 255, 255, 0.8); /* Softer text color */
 }
 
 
@@ -116,6 +134,16 @@ button:focus-visible {
   }
   .card2 {
     width: calc(100% / 1);
+  }
+  .input-groups{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo{
+    height: 40px;
+    width: 40px;
   }
 }
 

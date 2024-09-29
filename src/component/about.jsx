@@ -9,14 +9,14 @@ function About() {
       style={{ backgroundColor: "#192d41" }}
     >
       <h1 className="text-4xl font-bold text-white mb-6 text-center">
-        What Our Clients Say
+        Hear from Our Satisfied Clients{" "}
       </h1>
       <div className="flex flex-wrap gap-6 w-full p-4 justify-center">
-        <div className="card2 bg-white bg-opacity-10 p-8 rounded-xl shadow-lg hover:bg-opacity-20 transform hover:scale-105 transition-transform duration-300 text-center ">
+        <div className="card2 bg-white bg-opacity-10 p-8 rounded-xl shadow-lg hover:bg-opacity-20 transform hover:scale-105 transition-transform duration-300 text-center slide-in">
           <img
             src={client_1}
             alt="client-1"
-            className="rounded-full w-16 h-16 object-cover  mx-auto mb-4"
+            className="rounded-full w-16 h-16 object-cover mx-auto mb-4"
           />
           <h2 className="text-lg font-bold mb-2">John Doe</h2>
           <p className="text-sm text-gray-300 italic">
@@ -24,22 +24,22 @@ function About() {
             day."
           </p>
         </div>
-        <div className="card2 bg-white bg-opacity-10 p-8 rounded-xl shadow-lg hover:bg-opacity-20 transform hover:scale-105 transition-transform duration-300 text-center ">
+        <div className="card2 bg-white bg-opacity-10 p-8 rounded-xl shadow-lg hover:bg-opacity-20 transform hover:scale-105 transition-transform duration-300 text-center slide-in">
           <img
             src={client_2}
-            alt="client-1"
-            className="rounded-full w-16 h-16 object-cover  mx-auto mb-4"
+            alt="client-2"
+            className="rounded-full w-16 h-16 object-cover mx-auto mb-4"
           />
           <h2 className="text-lg font-bold mb-2">Jane Smith</h2>
           <p className="text-sm text-gray-300 italic">
             "The accuracy and simplicity are top-notch. I highly recommend it!"
           </p>
         </div>
-        <div className="card2 bg-white bg-opacity-10 p-8 rounded-xl shadow-lg hover:bg-opacity-20 transform hover:scale-105 transition-transform duration-300 text-center">
+        <div className="card2 bg-white bg-opacity-10 p-8 rounded-xl shadow-lg hover:bg-opacity-20 transform hover:scale-105 transition-transform duration-300 text-center slide-in">
           <img
             src={client_3}
-            alt="client-1"
-            className="rounded-full w-16 h-16 object-cover  mx-auto mb-4"
+            alt="client-3"
+            className="rounded-full w-16 h-16 object-cover mx-auto mb-4"
           />
           <h2 className="text-lg font-bold mb-2">Mike Johnson</h2>
           <p className="text-sm text-gray-300 italic">

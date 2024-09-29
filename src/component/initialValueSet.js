@@ -14,7 +14,7 @@ function initialSet(
   // Set values based on selected category
   if (selectedCategory === "Temperature") {
     setSelectFirst("Celcius");
-    setSelectFirst2("Ferenheit");
+    setSelectFirst2("Fahrenheit");
     setValue1(0);
     setValue2(32);
   } else if (selectedCategory === "Mass") {

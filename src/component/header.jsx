@@ -34,7 +34,7 @@ function MainHeader() {
             alt="Logo"
             height={"60px"}
             width={"60px"}
-            className="rounded object-cover"
+            className="rounded object-cover logo"
           />
           Unitify
         </Link>
