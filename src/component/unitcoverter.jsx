@@ -41,7 +41,6 @@ function UnitConverter() {
   };
 
   const unitsCategories = unitCheck();
-  console.log(length);
   
 
   if (selectFirst === selectFirst2 && trigger === "first") {
